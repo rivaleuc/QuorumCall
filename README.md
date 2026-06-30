@@ -11,6 +11,7 @@ threshold, the petition flips to `passed` (the trigger).
 The verb is **"gather verified endorsements until a threshold fires"** — a quorum gate, distinct from a
 trust score or a single verdict; ineligible/duplicate endorsements simply don't count.
 
+- **Live demo:** https://quorumcall.pages.dev
 - **Contract (Bradbury, chain 4221):** `0x447a49c8590DCeDDFb48F7843466B9F734c97E7e`
 - **Deployed from:** `rivale` (`0xc388…51A44`)
 - **Explorer:** https://explorer-bradbury.genlayer.com/contract/0x447a49c8590DCeDDFb48F7843466B9F734c97E7e
