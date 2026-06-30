@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+/* ----- QuorumCall palette: rose petition + gold, near-black ----- */
+@theme {
+  --color-background: #0d0709;
+  --color-surface: #170b0f;
+  --color-card: #1d1014;
+  --color-border: #3e2230;
+  --color-foreground: #f6ebef;
+  --color-muted: #b08f9c;
+
+  --color-primary: #fb7185;            /* rose-400 — petition */
+  --color-primary-foreground: #1a0810;
+  --color-accent: #fbbf24;             /* gold — passed */
+
+  --color-true: #34d399;               /* eligible */
+  --color-false: #fb7185;              /* ineligible */
+  --color-unverifiable: #fbbf24;
+  --color-ring: #fb7185;
+
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(calc(-100% - var(--gap, 1rem))); } }
+@keyframes gradient-x { to { background-position: 200% center; } }
+@keyframes meteor { 0% { transform: rotate(215deg) translateX(0); opacity: 1; } 70% { opacity: 1; } 100% { transform: rotate(215deg) translateX(-560px); opacity: 0; } }
+@keyframes shiny { 0% { background-position: calc(-100% - var(--shiny-w, 100px)) 0; } 100% { background-position: calc(100% + var(--shiny-w, 100px)) 0; } }
+@keyframes scan { 0% { transform: translateY(-120%); } 100% { transform: translateY(120%); } }
+@keyframes pulse-ring { 0% { transform: scale(.8); opacity: .5; } 100% { transform: scale(2.2); opacity: 0; } }
+
+@layer base {
+  * { border-color: var(--color-border); }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection { background: color-mix(in oklab, var(--color-primary) 32%, transparent); }
+}
